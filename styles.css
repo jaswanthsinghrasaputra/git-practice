@@ -42,8 +42,6 @@ a:hover {
 section {
   padding: 4px;
   margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 4px 4px 4px 4px rgba(240, 178, 178, 0.1);
 }
 
 section h2 {
@@ -60,7 +58,7 @@ section p {
 }
 
 section a {
-  color: #34db71;
+  color: #e422db;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -72,4 +70,40 @@ section a:hover {
 #images {
   height: 6rem;
   width: 10rem;
+}
+
+.animated-button {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 16px;
+  border: none;
+  background-color: #79cf59;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.animated-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease, width 0.3s ease;
+}
+
+.animated-button:hover {
+  background-color: #2980b9;
+}
+
+.animated-button:hover::before {
+  width: 100%;
+  opacity: 1;
 }
