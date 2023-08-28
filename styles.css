@@ -26,3 +26,14 @@ p {
   margin: 20px auto;
   max-width: 600px;
 }
+
+/* Styles for links */
+a {
+  color: #34db90;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #e10a0a;
+}
